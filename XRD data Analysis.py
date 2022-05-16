@@ -134,4 +134,4 @@ elif function_select == 2:
     y.to_csv('{}-y.csv'.format(data_name_rsm))
     z = pd.DataFrame(z)
     z.to_csv('{}-z.csv'.format(data_name_rsm))
-    print("RSM数据已输出完成。")
+    print("RSM数据已输出完成,导入后请删除首行错误数据。")
