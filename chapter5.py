@@ -34,3 +34,14 @@ image1=image1.astype(np.uint8)
 #cv.destroyAllWindows()
 
 
+image = cv.imread(r"C:\Users\zhjr\Desktop\22.jpg", cv.IMREAD_ANYCOLOR)
+clahea = cv.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+
+#equ = cv.equalizeHist(image)
+gray_image = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
+dst = clahea.apply(gray_image)
+cv.imshow("image", gray_image)
+cv.imshow("dst",dst)
+#cv.imshow("clahe", dst)
+cv.waitKey()
+cv.destroyAllWindows()
